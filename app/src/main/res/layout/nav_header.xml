@@ -3,7 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:gravity="top"
+    android:gravity="bottom"
     android:padding="16dp"
     android:background="@drawable/header_bg">
 
@@ -15,22 +15,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Plant Shop"
+            android:textColor="@color/medium_light"
+            android:textSize="30sp"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="VsevolodCorp"
             android:textColor="@color/medium_light"
-            android:textSize="24sp"/>
+            android:textSize="12sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vsevolod@corp.com"
             android:textColor="@color/medium_light"
-            android:textSize="18sp"/>
+            android:textSize="10sp"/>
 
     </LinearLayout>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
         android:src="@drawable/logo"
         android:layout_alignParentRight="true"/>
 
