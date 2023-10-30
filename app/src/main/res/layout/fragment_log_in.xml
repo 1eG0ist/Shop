@@ -4,15 +4,127 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogInFragment"
-    android:background="@color/very_light">
+    android:background="@color/light">
+
+
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LogIn Fragment"
-        android:textSize="30sp"
-        android:layout_gravity="center"
-        android:textColor="@color/darker"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_backgraund"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="150dp"
+        android:paddingVertical="30dp">
+
+        <TextView
+            android:id="@+id/signInText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:textSize="24sp"
+            android:textColor="@color/darker"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/signInEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signInText"
+            android:layout_marginTop="70dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Email"/>
+
+        <EditText
+            android:id="@+id/signInEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signInEmailText"
+            android:layout_marginTop="2dp"
+            android:hint="Enter email"
+            android:text="ааываыав"
+            android:textColorHint="@color/medium"
+            android:textColor="@color/darker"
+            android:background="@drawable/input_text_bg"
+            android:maxLength="256"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:id="@+id/signInPasswordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signInEmail"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Password"/>
+
+        <!-- TODO create eye for change visibility of password-->
+
+        <EditText
+            android:id="@+id/signInPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signInPasswordText"
+            android:layout_marginTop="2dp"
+            android:hint="Enter password"
+            android:textColorHint="@color/medium"
+            android:textColor="@color/darker"
+            android:background="@drawable/input_text_bg"
+            android:maxLength="64"
+            android:inputType="textPassword"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <RelativeLayout
+            android:id="@+id/acceptSignInButtonArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/signInPassword">
+
+            <Button
+                android:id="@+id/AcceptSingInButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/acceptSignInButtonArea"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="sign in"
+                android:textColor="@color/darker"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/darker"
+                android:layout_marginVertical="5dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="sign up"
+                android:textColor="@color/darker"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>
