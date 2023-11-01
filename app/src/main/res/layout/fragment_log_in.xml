@@ -6,77 +6,172 @@
     tools:context=".LogInFragment"
     android:background="@color/light">
 
-
-
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/login_backgraund"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_background"
         android:layout_marginHorizontal="50dp"
         android:layout_marginVertical="150dp"
-        android:paddingVertical="30dp"
-        android:visibility="invisible">
+        android:paddingVertical="30dp">
 
-        <TextView
-            android:id="@+id/signInText"
+        <RelativeLayout
+            android:id="@+id/signInArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign in"
-            android:textSize="24sp"
-            android:textColor="@color/darker"
-            android:gravity="center_horizontal"/>
+            android:visibility="visible">
 
-        <TextView
-            android:id="@+id/signInEmailText"
+            <TextView
+                android:id="@+id/signInText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:textSize="24sp"
+                android:textColor="@color/darker"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/signInEmailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signInText"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Email"/>
+
+            <EditText
+                android:id="@+id/signInEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signInEmailText"
+                android:layout_marginTop="2dp"
+                android:hint="Enter email"
+                android:textColorHint="@color/medium"
+                android:textColor="@color/darker"
+                android:background="@drawable/input_text_bg"
+                android:maxLength="256"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                android:id="@+id/signInPasswordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signInEmail"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Password"/>
+
+            <!-- TODO create eye for change visibility of password-->
+
+            <EditText
+                android:id="@+id/signInPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signInPasswordText"
+                android:layout_marginTop="2dp"
+                android:hint="Enter password"
+                android:textColorHint="@color/medium"
+                android:textColor="@color/darker"
+                android:background="@drawable/input_text_bg"
+                android:maxLength="64"
+                android:inputType="textPassword"
+                android:autofillHints="password" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signUpArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/signInText"
-            android:layout_marginTop="70dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="Email"/>
+            android:visibility="invisible">
 
-        <EditText
-            android:id="@+id/signInEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/signInEmailText"
-            android:layout_marginTop="2dp"
-            android:hint="Enter email"
-            android:textColorHint="@color/medium"
-            android:textColor="@color/darker"
-            android:background="@drawable/input_text_bg"
-            android:maxLength="256"
-            android:focusable="true"
-            android:focusableInTouchMode="true"/>
+            <TextView
+                android:id="@+id/signUpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:textSize="24sp"
+                android:textColor="@color/darker"
+                android:gravity="center_horizontal"/>
 
-        <TextView
-            android:id="@+id/signInPasswordText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/signInEmail"
-            android:layout_marginTop="10dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="Password"/>
+            <TextView
+                android:id="@+id/signUpEmailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpText"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Email"/>
 
-        <!-- TODO create eye for change visibility of password-->
+            <EditText
+                android:id="@+id/signUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpEmailText"
+                android:layout_marginTop="2dp"
+                android:hint="Enter email"
+                android:textColorHint="@color/medium"
+                android:textColor="@color/darker"
+                android:background="@drawable/input_text_bg"
+                android:maxLength="256"
+                android:inputType="textEmailAddress"/>
 
-        <EditText
-            android:id="@+id/signInPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/signInPasswordText"
-            android:layout_marginTop="2dp"
-            android:hint="Enter password"
-            android:textColorHint="@color/medium"
-            android:textColor="@color/darker"
-            android:background="@drawable/input_text_bg"
-            android:maxLength="64"
-            android:inputType="textPassword"
-            android:focusable="true"
-            android:focusableInTouchMode="true"/>
+            <TextView
+                android:id="@+id/signUpPasswordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpEmail"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Password"/>
+
+            <!-- TODO create eye for change visibility of password-->
+
+            <EditText
+                android:id="@+id/signUpPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpPasswordText"
+                android:layout_marginTop="2dp"
+                android:hint="Enter password"
+                android:textColorHint="@color/medium"
+                android:textColor="@color/darker"
+                android:background="@drawable/input_text_bg"
+                android:maxLength="64"
+                android:inputType="textPassword"/>
+
+            <TextView
+                android:id="@+id/signUpConfirmPasswordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpPassword"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Confirm Password"/>
+
+            <!-- TODO create eye for change visibility of password-->
+
+            <EditText
+                android:id="@+id/signUpConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpConfirmPasswordText"
+                android:layout_marginTop="2dp"
+                android:hint="Enter password"
+                android:textColorHint="@color/medium"
+                android:textColor="@color/darker"
+                android:background="@drawable/input_text_bg"
+                android:maxLength="64"
+                android:inputType="textPassword"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/acceptSignInButtonArea"
@@ -84,116 +179,15 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="40dp"
-            android:layout_below="@id/signInPassword">
+            android:layout_above="@id/chooseArea">
 
             <Button
-                android:id="@+id/AcceptSingInButton"
+                android:id="@+id/AcceptSignInButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign in"/>
 
         </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/acceptSignInButtonArea"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparent"
-                android:text="sign in"
-                android:textColor="@color/darker"
-                android:textStyle="bold"/>
-
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="@color/darker"
-                android:layout_marginVertical="5dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparent"
-                android:text="sign up"
-                android:textColor="@color/darker"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/login_backgraund"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginVertical="150dp"
-        android:paddingVertical="30dp">
-
-        <TextView
-            android:id="@+id/signUpText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign up"
-            android:textSize="24sp"
-            android:textColor="@color/darker"
-            android:gravity="center_horizontal"/>
-
-        <TextView
-            android:id="@+id/signUpEmailText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/signUpText"
-            android:layout_marginTop="70dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="Email"/>
-
-        <EditText
-            android:id="@+id/signUpEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/signUpEmailText"
-            android:layout_marginTop="2dp"
-            android:hint="Enter email"
-            android:textColorHint="@color/medium"
-            android:textColor="@color/darker"
-            android:background="@drawable/input_text_bg"
-            android:maxLength="256"
-            android:focusable="true"
-            android:focusableInTouchMode="true"/>
-
-        <TextView
-            android:id="@+id/signUpPasswordText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/signUpEmail"
-            android:layout_marginTop="10dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="Password"/>
-
-        <!-- TODO create eye for change visibility of password-->
-
-        <EditText
-            android:id="@+id/signUpPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/signUpPasswordText"
-            android:layout_marginTop="2dp"
-            android:hint="Enter password"
-            android:textColorHint="@color/medium"
-            android:textColor="@color/darker"
-            android:background="@drawable/input_text_bg"
-            android:maxLength="64"
-            android:inputType="textPassword"
-            android:focusable="true"
-            android:focusableInTouchMode="true"/>
 
         <RelativeLayout
             android:id="@+id/acceptSignUpButtonArea"
@@ -201,10 +195,10 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="40dp"
-            android:layout_below="@id/signUpPassword">
+            android:layout_above="@id/chooseArea">
 
             <Button
-                android:id="@+id/AcceptSingUpButton"
+                android:id="@+id/AcceptSignUpButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign up"/>
@@ -212,13 +206,15 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/chooseArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/acceptSignUpButtonArea"
+            android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:gravity="center">
 
             <Button
+                android:id="@+id/signInButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -233,6 +229,7 @@
                 android:layout_marginVertical="5dp"/>
 
             <Button
+                android:id="@+id/signUpButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
